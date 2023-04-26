@@ -1,0 +1,88 @@
+#Services {
+    padding: 10rem 0;
+    z-index: 2;
+  }
+  
+  .services_container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+  
+.service {
+  background: var(--color-bg-variant);
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%; /* change this value to a percentage that works for your design */
+}
+  
+  .service:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  }
+  
+  .service_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .service_head h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+  
+  .service_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .service_list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .service_list-icon {
+    margin-right: 1rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+  }
+  
+  .service_list p {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+  }
+
+  
+  @media screen and (max-width: 1024px) {
+    .services_container {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .service {
+        height: auto;
+    }
+  }
+ 
+    @media screen and (max-width: 600px) {
+        .services_container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        }
+    }
+  
